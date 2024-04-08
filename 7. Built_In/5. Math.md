@@ -1,0 +1,249 @@
+-----
+### Math 객체 
+-----
+1. https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math
+2. 수학에 관련된 기능을 가진 Built-In 객체
+3. 정적 프로퍼티와 메서드만 제공 (즉, 생성자 함수 불가 = 오류 발생)
+4. Number 타입만 지원 (BigInt 사용 불가)
+
+-----
+### 주요 정적 프로퍼티
+-----
+1. PI : 원주율
+```js
+console.log(
+  Math.PI
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/ed946e58-332e-45b6-ba15-e5bab8aee1e2">
+</div>
+
+2. E : 자연로그의 및
+```js
+console.log(
+  Math.E
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/90f33123-dd44-40dd-9456-247da8101e9d">
+</div>
+
+-----
+### 주요 정적 메서드
+-----
+1. abs
+  - 절댓값 (0 이상) 반환
+```js
+console.log(
+  Math.abs(123),
+  Math.abs(-123),
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/c7daf4b0-6587-4bad-b549-3c6bc444e995">
+</div>
+
+
+```js
+// 0 반환
+console.log(
+  Math.abs(0),
+  Math.abs(''),
+  Math.abs(null),
+  Math.abs([]),
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/9e26836d-53a4-41ea-9413-0c5b5c0dd16f">
+</div>
+
+
+```js
+// NaN 반환
+console.log(
+  Math.abs('abc'),
+  Math.abs(undefined),
+  Math.abs({a: 1}),
+  Math.abs([1, 2, 3]),
+  Math.abs()
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/d0a1d958-d11d-454d-af55-d192006f304a">
+</div>
+
+```js
+const isEqual = (a, b) => {
+  return Math.abs(a - b) < Number.EPSILON;
+}
+
+console.log(
+  isEqual(0.1 + 0.2, 0.3),
+  isEqual(0.3, 0.1 + 0.2)
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/0bf32a82-d3fc-4640-8e1e-4c594e03bcc9">
+</div>
+
+2. ceil / round / floor / trunc 
+   - 올림 / 반올림 / 내림 / 정수부만
+```js
+for (const num of [1.4, 1.6, -1.4, -1.6]) {
+  console.log(
+    num + ' : ',
+    Math.ceil(num),
+    Math.round(num),
+    Math.floor(num),
+    Math.trunc(num),
+  );
+}
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/a3b0a44b-82e2-4718-ae13-972e06c509fc">
+</div>
+
+```js
+// NaN 반환
+console.log(
+  Math.ceil(),
+  Math.round(),
+  Math.floor(),
+  Math.trunc()
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/1d4e3c2b-972e-4006-82c7-0d4d883bd991">
+</div>
+
+3. pow
+   - ~로 거듭제곱
+```js
+console.log(
+  Math.pow(4, 2), // 4 ** 2
+  Math.pow(4, 1), // 4 ** 1
+  Math.pow(4, 0), // 4 ** 0
+  Math.pow(4, -1) // 4 ** -1
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/a214e993-d302-4dcc-9db5-d48c1d63886a">
+</div>
+
+  - ** 연산자로 더 간결히 표현 가능
+  - 두 숫자 인자 필요
+```js
+// NaN 반환
+console.log(
+  Math.pow(4)
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/70c5b34d-60c3-4864-aa84-eeed606f154a">
+</div>
+
+4. sqrt
+   - 제곱근
+```js
+console.log(
+  Math.sqrt(25), // 25 ** 0.5
+  Math.sqrt(9),
+  Math.sqrt(2),
+  Math.sqrt(1),
+  Math.sqrt(0)
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/51593018-d430-4d4f-b240-380998274b83">
+</div>
+
+  - 음수 또는 인자가 없으면 NaN 반환
+```js
+// NaN 반환
+console.log(
+  Math.sqrt(-25),
+  Math.sqrt()
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/ab8dc4a3-79d7-4738-9c3e-710c73ab13b2">
+</div>
+
+5. max, min
+   - 인자들 중 최대값과 촤소값
+```js
+console.log(
+  Math.max(8, 5, 9, 6, 3, 1, 4, 2, 7),
+  Math.min(8, 5, 9, 6, 3, 1, 4, 2, 7)
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/fd4298a8-d31a-4dd2-b21f-c18bbe1676fc">
+</div>
+
+6. random
+   - 0과 1사이의 무작위 값
+```js
+for (let i = 0; i < 10; i++) {
+  console.log(Math.random());
+}
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/8afde69b-ecd2-487a-ba6b-7785680ff72f">
+</div>
+
+  - 0 ~ 9 사이의 정수 무작위로 만들기
+```js
+for (let i = 0; i < 10; i++) {
+  console.log(
+    Math.floor(Math.random() * 10)
+  );
+}
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/bb3b432d-95ac-4c34-ab21-9d16b1648569">
+</div>
+
+```js
+for (let i = 0; i < 10; i++) {
+  console.log(
+    Math.ceil(Math.random() * 10 - 1)
+  );
+}
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/75724203-e63a-4614-905e-af77b05cc693">
+</div>
+
+  - 안전한 (균일하고 예측 불가한) 난수 생성은 아님
+  - 보안에 관련된 것이라면, 전용 라이브러리 또는 링크 방식 사용
+  - Crypto.getRandomValues 메서드 : https://developer.mozilla.org/ko/docs/Web/API/Crypto/getRandomValues
+
+7. sin / cos / tan / asin / acos / atan
+  - 사인 / 코사인 / 탄젠트 / 아크사인 / 아크코사인 / 아크탄젠트
+```js
+ console.log(
+  // 1(또는 근사값) 반환
+  Math.sin(Math.PI / 2),
+  Math.cos(Math.PI * 2),
+  Math.tan(Math.PI / 180 * 45)
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/27f66422-1a37-44f1-b636-7a73d4a6c962">
+</div>
+
+```js
+console.log(
+  // Math.PI / 2 반환
+  Math.asin(1),
+  Math.acos(0),
+  Math.atan(Infinity)
+);
+```
+<div align="center">
+<img src="https://github.com/sooyounghan/Web/assets/34672301/026362f2-72c2-4b45-bad7-81d0e3e5096a">
+</div>
+
+
