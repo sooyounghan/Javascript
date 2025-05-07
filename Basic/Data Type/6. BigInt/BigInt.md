@@ -1,7 +1,7 @@
 -----
 ### Number.MAX_SAFE_INTEGER
 -----
-: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt
+: ```https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt```
 1. 더 큰 정수를 다루기 위한 자료형
 2. 매우 큰 정수를 다뤄야 하는 특수한 경우 사용
 ```js
