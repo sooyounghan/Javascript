@@ -85,7 +85,7 @@ console.log(x, y, z);
 -----
 ### 연산자 우선순위
 -----
-  - 전체 연산자 우선순위 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#%EC%97%B0%EC%82%B0%EC%9E%90_%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84
+  - 전체 연산자 우선순위 : ```https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#%EC%97%B0%EC%82%B0%EC%9E%90_%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84```
 <div align="center">
 <img src="https://github.com/sooyounghan/Web/assets/34672301/5c7bbce2-3be3-47fd-9ae9-b442157b6847">
 </div>
