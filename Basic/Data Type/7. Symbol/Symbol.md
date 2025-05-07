@@ -3,7 +3,7 @@
 -----
 1. 다른 값과 절대 중복되지 않는 유일무이한 값
    - 원시 타입
-   - https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+   - ```https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol```
 
 2. 기본 생성과 활용
 ```js
