@@ -153,7 +153,7 @@ console.log(y, z);
 </div>
 
 3. 삼항 연산자 : (  ? : )
-  - https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+  - ```https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator```
 ```js
 let x = true;
 // x = false;
@@ -195,8 +195,8 @@ error
 ### Truthy vs Falsy
 -----
 1. true 또는 false로 평가되는 값들
-   - Truthy 목록 : https://developer.mozilla.org/ko/docs/Glossary/Truthy
-   - Falsy 목록 : https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+   - Truthy 목록 : ```https://developer.mozilla.org/ko/docs/Glossary/Truthy```
+   - Falsy 목록 : ```https://developer.mozilla.org/en-US/docs/Glossary/Falsy```
 
 2. Truthy (참 같은 값)
    - 0이 아닌 숫자
