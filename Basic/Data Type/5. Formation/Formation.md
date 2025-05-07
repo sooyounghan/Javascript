@@ -1,7 +1,7 @@
 -----
 ### 다른 진법들
 -----
-: https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#2%EC%A7%84%EC%88%98
+: ```https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#2%EC%A7%84%EC%88%98```
 1. 2진법 (Binary)
    - 0b 뒤로 숫자 0, 1를 붙여 표현
 ```js
@@ -109,7 +109,7 @@ console.log(
 -----
 ### 비트 연산자
 -----
-: https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#%EB%B9%84%ED%8A%B8_%EC%97%B0%EC%82%B0%EC%9E%90
+: ```https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#%EB%B9%84%ED%8A%B8_%EC%97%B0%EC%82%B0%EC%9E%90```
 
 ```js
 let x = 0b1010101010; // 682
